@@ -110,6 +110,12 @@ type Session struct {
 
 	// used to make sure gateway websocket writes do not happen concurrently
 	wsMutex sync.Mutex
+
+	// websocket dialer
+	Dialer *websocket.Dialer
+
+	// voice websocket dialer
+	VoiceDialer *websocket.Dialer
 }
 
 // A VoiceRegion stores data for a specific voice region server.
